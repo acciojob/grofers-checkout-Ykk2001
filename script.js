@@ -7,7 +7,7 @@ const getSum = () => {
 let priceAll=document.querySelectorAll('.price')
 console.log(priceAll);
 
-	//
+	//calculating total sum
 	let total=0;
 	priceAll.forEach((cell)=>{
 		 total=total+parseFloat(cell.textContent)
@@ -19,6 +19,7 @@ console.log(priceAll);
     totalRow.classList.add("total-row");
 
 	const totalCell = document.createElement("td");
+	totalCell.id='ans';
     totalCell.setAttribute("colspan", "2");
     totalCell.textContent = "Total Price: " + total;
 
